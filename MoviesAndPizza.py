@@ -63,10 +63,10 @@ def print_pizza_toppings(about_me):
     
 def print_movie_genres(about_me):
     sentence = "I like to watch "
-    for t,g in enumerate(about_me["movies"]):
+    for m,g in enumerate(about_me["movies"]):
         sentence += g["genre"]
 
-        if t < len(about_me["movies"]) - 1:
+        if m < len(about_me["movies"]) - 1:
             sentence += ", "
         else:
             sentence += " "
@@ -74,10 +74,10 @@ def print_movie_genres(about_me):
 
 def print_movie_titles(about_me):
     sentence = "Some of my favourites are "
-    for g,t in enumerate(about_me["movies"]):
+    for m,t in enumerate(about_me["movies"]):
         sentence += t["title"]
 
-        if g < len(about_me["movies"]) - 1:
+        if m < len(about_me["movies"]) - 1:
             sentence += ", "
         else:
             sentence += "!"
