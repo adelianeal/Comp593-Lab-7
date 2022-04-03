@@ -74,10 +74,10 @@ def print_movie_genres(about_me):
 
 def print_movie_titles(about_me):
     sentence = "Some of my favourites are "
-    for t,g in enumerate(about_me["movies"]):
-        sentence += g["title"]
+    for g,t in enumerate(about_me["movies"]):
+        sentence += t["title"]
 
-        if t < len(about_me["movies"]) - 1:
+        if g < len(about_me["movies"]) - 1:
             sentence += ", "
         else:
             sentence += "!"
